@@ -29,21 +29,30 @@ main{
     position: relative;
 }
 
-.content{
-    height: 60%;
-    width: 50%;
-    background-color: var(--White);
+.float{
+    height:auto;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.content{
+    height:auto;
+    width: 50%;
+    background-color: var(--White);
     border-radius: 2rem 2rem 10rem 2rem;
-    padding: 3rem 4rem;
+    padding: 1.5rem 3rem 3rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-evenly;
-    gap: 0;                                        /**/
 }
 
 .top, .bottom{
@@ -51,11 +60,11 @@ main{
 }
 
 .top{
-    background-color: rgb(238, 164, 238);
+    /* background-color: rgb(238, 164, 238); */
 }
 
 .bottom{
-    background-color: mediumaquamarine;
+    /* background-color: mediumaquamarine; */
 }
 
 .inputBox{
@@ -63,7 +72,6 @@ main{
     align-items: center;
     justify-content: start;
     gap: 1rem;
-    /* background-color: pink; */
 }
 
 .inputs{
@@ -90,13 +98,20 @@ main{
     font-weight: 700;
     letter-spacing: 2px;
     border-radius: 5px;
-    border: 1px solid var(--Smokey-grey);
+    border: 1px solid var(--Light-grey);
     outline: none;
+}
+
+input:focus{
+    border: 1.5px solid var(--Purple);
+}
+
+input::placeholder{
+    color: var(--Smokey-grey);
 }
 
 .submit-section{
     width: 100%;
-    /* background-color: salmon; */
     display: flex;
     align-items: center;
     justify-content: end;
@@ -116,9 +131,27 @@ main{
     cursor: pointer;
 }
 
+.submitBtn:hover{
+    background-color: var(--Off-black);
+}
+
+.output h1{
+    font-size: 6rem;
+    font-family: "Poppins";
+    line-height: 5.9rem;
+}
+
+h1 span{
+    color: var(--Purple);
+    font-size: 7rem;
+    font-weight: 800;
+    text-align: center;
+}
+
 
 .attribution{ 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
+    text-align: center; 
 }
 
 .attribution a{ 

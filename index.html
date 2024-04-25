@@ -12,56 +12,59 @@
 </head>
 <body>
   <main>
-    <div class="content">
+    <div class="float">
+      <div class="content">
 
-      <div class="top">
-        <div class="inputBox">
-        
-          <div class="inputs">
-            <label for="day"><small>DAY</small></label>
-            <input type="number" class="month" placeholder="DD" required/>
-            <span><small class="emptyError">error</small></span>
+        <div class="top">
+          <div class="inputBox">
+          
+            <div class="inputs ">
+              <label for="day"><small>DAY</small></label>
+              <input type="number" class="month" placeholder="DD" required/>
+              <span><small class="emptyError">error</small></span>
+            </div>
+    
+            <div class="inputs ">
+              <label for="day"><small>MONTH</small></label>
+              <input type="number" class="month" placeholder="MM" required/>
+              <span><small class="emptyError">error</small></span>
+            </div>
+    
+            <div class="inputs ">
+              <label for="day"><small>YEAR</small></label>
+              <input type="number" class="month" placeholder="YYYY" required/>
+              <span><small class="emptyError">erroer</small></span>
+            </div>
+    
           </div>
-  
-          <div class="inputs">
-            <label for="day"><small>MONTH</small></label>
-            <input type="number" class="month" placeholder="MM" required/>
-            <span><small class="emptyError">error</small></span>
+    
+          <div class="submit-section">
+            <div class="horizontal-line"></div>
+    
+            <button class="submitBtn">
+              <img src="./assets/images/icon-arrow.svg" alt="submit">
+            </button>
           </div>
-  
-          <div class="inputs">
-            <label for="day"><small>YEAR</small></label>
-            <input type="number" class="month" placeholder="YYYY" required/>
-            <span><small class="emptyError">erroer</small></span>
-          </div>
-  
         </div>
   
-        <div class="submit-section">
-          <div class="horizontal-line"></div>
-  
-          <button class="submitBtn">
-            <img src="./assets/images/icon-arrow.svg" alt="submit">
-          </button>
+        <div class="bottom">
+          <div class="output">
+            <h1><span class="displayYear">--</span>Years <br>
+           <span class="displayMonths">--</span>Months <br>
+           <span class="displayDays">--</span>Days</h1>
+          </div>
         </div>
+  
       </div>
 
-      <div class="bottom">
-        <div class="output">
-          <div><span class="displayYear">- -</span>Years</div>
-          <div><span class="displayMonths">- -</span>Months</div>
-          <div><span class="displayDays">- -</span>Days</div>
-        </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Tejas More</a>
       </div>
-      
     </div>
 
   </main>
   
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Tejas More</a>
-  </div> -->
 
   <script src="script.js"></script>
 </body>
