@@ -84,6 +84,21 @@ main{
     gap: 0.4rem;
 }
 
+/*failure condition*/
+.inputs.failure small{
+    color: var(--Light-ed);
+}
+
+.inputs.failure input{
+    border: 1px solid var(--Light-ed);
+}
+
+.inputs.failure .emptyError{
+    visibility: visible;
+}
+/*failure condition ends*/
+
+
 .inputs label{
     font-size: 1rem;
     font-weight: 500;
@@ -118,6 +133,10 @@ input[type="number"]::-webkit-inner-spin-button {
     position: absolute; /* Position off-screen */
     right: 100%; /* Position off-screen */
     opacity: 0; /* Hide the control */
+}
+
+.emptyError{
+    visibility: hidden;
 }
 
 .submit-section{
