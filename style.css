@@ -43,8 +43,19 @@ main{
     flex-direction: column;
     align-items: start;
     justify-content: space-evenly;
-    gap: 2rem;
+    gap: 0;                                        /**/
+}
 
+.top, .bottom{
+    width: 100%;
+}
+
+.top{
+    background-color: rgb(238, 164, 238);
+}
+
+.bottom{
+    background-color: mediumaquamarine;
 }
 
 .inputBox{
@@ -82,6 +93,29 @@ main{
     border: 1px solid var(--Smokey-grey);
     outline: none;
 }
+
+.submit-section{
+    width: 100%;
+    /* background-color: salmon; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.horizontal-line {
+    border-top: 1px solid var(--Smokey-grey); 
+    width: 100%;
+}
+
+.submitBtn{
+    background-color: var(--Purple);
+    width: 6rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
 
 .attribution{ 
     font-size: 11px; text-align: center; 
