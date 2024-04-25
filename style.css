@@ -110,6 +110,16 @@ input::placeholder{
     color: var(--Smokey-grey);
 }
 
+/*to remove default range function*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Optional: Remove margin */
+    position: absolute; /* Position off-screen */
+    right: 100%; /* Position off-screen */
+    opacity: 0; /* Hide the control */
+}
+
 .submit-section{
     width: 100%;
     display: flex;
