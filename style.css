@@ -183,16 +183,70 @@ h1 span{
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     /* Styles for large devices */
-    main{
-        background-color: slateblue;
-    }
-
     .content{
-        width: 60%;
+        width: 62%;
     }
        
     .attribution{ 
         font-size: 12px; 
     }
     
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Styles for medium devices */
+    .content{
+        width: 75%;
+        padding: 1.5rem 2rem 3rem 2rem;
+    }
+
+    h1 span{
+        margin-right: 10px;
+    }
+       
+    .attribution{ 
+        font-size: 12px; 
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Styles for small devices */
+
+    .content{
+        width: 90%;
+        padding: 1.5rem 3rem 3rem 3rem;
+    }
+    
+    .inputs{
+        width: 8rem;
+    }
+    
+    .inputs input{
+        width: 7rem;
+    }
+    
+    .submit-section{
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .horizontal-line {
+        border-top: 1px solid var(--Smokey-grey); 
+        width: 100%;
+    }
+
+    .output h1{
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+    
+    h1 span{
+        font-size: 5rem;
+        margin-right: 20px;
+    }
+    
+    
+    .attribution{ 
+        font-size: 12px; 
+    }
 }
