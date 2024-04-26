@@ -250,3 +250,56 @@ h1 span{
         font-size: 12px; 
     }
 }
+
+@media (max-width: 575.98px) {
+    /* Styles for extra small devices */
+
+
+    .float{
+        gap: 1rem;
+    }
+    
+    .content{
+        width: 95%;
+        border-radius: 1rem 1rem 6rem 1rem;
+        padding: 1.5rem 1.5rem 2rem 1.5rem;
+    }
+    
+    .inputs{
+        width: 10rem;
+        gap: 0rem;
+    }
+    
+    .inputs label{
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+    }
+    
+    .inputs input{
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .submitBtn{
+        width: 5rem;
+        height: 4rem;
+    }
+
+    .output h1{
+        font-size: 3rem;
+        line-height: 3.3rem;
+    }
+    
+    h1 span{
+        font-size: 3rem;
+        margin-right: 0px;
+    }
+    
+    
+    .attribution{ 
+        font-size: 12px; 
+    }
+    
+}
