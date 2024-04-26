@@ -12,6 +12,7 @@ submit.addEventListener("click", () => {
 
 
 const validateInputs = () => {
+    let hasError = false;
 
     const inpDay = document.querySelector(".inpday").value.trim();
     const inpMonths = document.querySelector(".inpmonth").value.trim();
@@ -20,32 +21,37 @@ const validateInputs = () => {
 
     if (inpDay === "") {
         errorCall(document.querySelector(".inpday"), "Day cannot be empty");
+        hasError = true;
     } 
     else if (inpDay > 31 || inpDay <= 0) {
         errorCall(document.querySelector(".inpday"), "Day cannot be zero or negative");
-    }
-    else{
-        displayOutput();
+        hasError = true;
     }
 
     if (inpMonths === "") {
         errorCall(document.querySelector(".inpmonth"), "Month cannot be empty");
+        hasError = true;
+        hasError = true;
     }
      else if (inpMonths > 12 || inpMonths <= 0) {
         errorCall(document.querySelector(".inpmonth"), "Month cannot be zero or negative");
-    }
-    else{
-        displayOutput();
+        hasError = true;
     }
 
 
     if (inpuYears === "") {
         errorCall(document.querySelector(".inpyear"), "Year cannot be empty");
+        hasError = true;
     } 
     else if (inpuYears <= 0) {
         errorCall(document.querySelector(".inpyear"), "Year cannot be zero or negative");
     }
-    else{
+    else if(inpuYears.length < 4 ) {
+        errorCall(document.querySelector(".inpyear"), "Invalid Year");
+    }
+
+    // Call displayOutput function only if no validation errors occurred
+    if (!hasError) {
         displayOutput();
     }
 
@@ -59,7 +65,7 @@ const errorCall = (input , errorMsg) => {
 }
 
 let displayOutput = () => {
-    YearOP.style.backgroundColor = "red";
-    MonthsOP.style.backgroundColor = "red";
-    DaysOP.style.backgroundColor = "red";
+        YearOP.style.backgroundColor = "green";
+        MonthsOP.style.backgroundColor = "green";
+        DaysOP.style.backgroundColor = "green";
 }
