@@ -23,9 +23,12 @@ const validateInputs = () => {
         errorCall(document.querySelector(".inpday"), "Day cannot be empty");
         hasError = true;
     } 
-    else if (inpDay > 31 || inpDay <= 0) {
-        errorCall(document.querySelector(".inpday"), "Day cannot be zero or negative");
+    else if (inpDay > 32 || inpDay <= 0) {
+        errorCall(document.querySelector(".inpday"), "Invalid Day");
         hasError = true;
+    }
+    else{
+        clearError(document.querySelector(".inpday"));
     }
 
     if (inpMonths === "") {
@@ -34,8 +37,11 @@ const validateInputs = () => {
         hasError = true;
     }
      else if (inpMonths > 12 || inpMonths <= 0) {
-        errorCall(document.querySelector(".inpmonth"), "Month cannot be zero or negative");
+        errorCall(document.querySelector(".inpmonth"), "Invalid Month");
         hasError = true;
+    }
+    else{
+        clearError(document.querySelector(".inpmonth"));
     }
 
 
@@ -44,10 +50,13 @@ const validateInputs = () => {
         hasError = true;
     } 
     else if (inpuYears <= 0) {
-        errorCall(document.querySelector(".inpyear"), "Year cannot be zero or negative");
+        errorCall(document.querySelector(".inpyear"), "Year cann't be negative");
     }
     else if(inpuYears.length < 4 ) {
         errorCall(document.querySelector(".inpyear"), "Invalid Year");
+    }
+    else{
+        clearError(document.querySelector(".inpyear"));
     }
 
     // Call displayOutput function only if no validation errors occurred
@@ -64,8 +73,17 @@ const errorCall = (input , errorMsg) => {
     parent.className = "inputs failure"
 }
 
+const clearError = (input) => {
+    const parent = input.parentNode;
+    const error = parent.querySelector(".emptyError")
+    if(error) {
+        error.innerText = " ";
+        parent.className = "inputs";
+    }
+}
+
 let displayOutput = () => {
-        YearOP.style.backgroundColor = "green";
+        YearOP.style.backgroundColor = "green";~
         MonthsOP.style.backgroundColor = "green";
         DaysOP.style.backgroundColor = "green";
 }
