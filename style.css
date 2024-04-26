@@ -180,4 +180,19 @@ h1 span{
 .attribution a{ 
     color: hsl(228, 45%, 44%); 
 }
- 
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Styles for large devices */
+    main{
+        background-color: slateblue;
+    }
+
+    .content{
+        width: 60%;
+    }
+       
+    .attribution{ 
+        font-size: 12px; 
+    }
+    
+}
